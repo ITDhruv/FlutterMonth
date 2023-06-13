@@ -1,8 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/utils/routes.dart';
 
 class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -16,7 +19,7 @@ class LoginPage extends StatelessWidget {
               Text(
                 "Welcome JODS",
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 28,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -39,13 +42,13 @@ class LoginPage extends StatelessWidget {
                         labelText: "Password: ",
                       ),
                     ),
-                    SizedBox(height: 20.0),
+                    SizedBox(height: 40.0),
                     ElevatedButton(
-                        child: Text("Login"),
-                        style: TextButton.styleFrom(),
+                        style: TextButton.styleFrom(minimumSize: Size(150, 40)),
                         onPressed: () {
-                          print("Login Successfull!");
-                        })
+                          Navigator.pushNamed(context, MyRoutes.homeRoute);
+                        },
+                        child: Text("Login"))
                   ],
                 ),
               )
