@@ -8,14 +8,6 @@ class CatalogModel {
         color: "#33505a",
         image:
             "https://as01.epimg.net/img/comunes/fotos/fichas/equipos/large/67.png"),
-    // Item(
-    //     id: 2,
-    //     name: "Aaryan's Club",
-    //     desc: "MAN C OP!",
-    //     price: 80,
-    //     color: "#33505a",
-    //     image:
-    //         "https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/1200px-Manchester_City_FC_badge.svg.png")
   ];
 }
 

@@ -1,0 +1,32 @@
+{
+
+    "products" : [
+        {
+        "id": 1,
+        "name": "Dhruv's Club",
+        "desc": "MAN U OP!",
+        "price": 60,
+        "color": "#33505a",
+        "image":
+            "https://as01.epimg.net/img/comunes/fotos/fichas/equipos/large/67.png"
+        },
+        {
+        "id": 2,
+        "name": "Aaryan's Club",
+        "desc": "MAN C OP!",
+        "price": 80,
+        "color": "#0000FF",
+        "image":
+            "https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/1200px-Manchester_City_FC_badge.svg.png"
+        },
+        {
+        "id": 3,
+        "name": "Pujan's Club",
+        "desc": "BARCA OP!",
+        "price": 20,
+        "color": "#FFBF00",
+        "image":
+            "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png"
+        }
+    ]
+}
