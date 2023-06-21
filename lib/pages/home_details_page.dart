@@ -13,7 +13,9 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       backgroundColor: MyTheme.creamColor,
       bottomNavigationBar: Container(
         color: Colors.white,
@@ -30,8 +32,8 @@ class HomeDetailPage extends StatelessWidget {
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(MyTheme.darkBlue),
                   shape: MaterialStateProperty.all(StadiumBorder())),
-              child: const Text("Buy"),
-            ).wh(100, 50)
+              child: const Text("Add to cart"),
+            ).wh(120, 50)
           ],
         ).p16(),
       ),
@@ -58,6 +60,11 @@ class HomeDetailPage extends StatelessWidget {
                           .textStyle(context.captionStyle)
                           .make(),
                       10.heightBox,
+                      "Ipsum sed et ut dolore amet aliquyam kasd, sit clita kasd rebum ut. Elitr accusam stet aliquyam sed labore. Consetetur gubergren sit amet et, et."
+                          .text
+                          .textStyle(context.captionStyle)
+                          .make()
+                          .p16()
                     ],
                   ).py64(),
                 ),

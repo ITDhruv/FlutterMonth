@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_catalog/models/catalog.dart';
 import 'package:flutter_catalog/pages/home_details_page.dart';
 import 'package:flutter_catalog/utils/widgets/themes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class CatalogList extends StatelessWidget {
   const CatalogList({super.key});
@@ -38,10 +39,10 @@ class CatalogItem extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(8, 16, 8, 16),
       color: Colors.white,
       constraints: const BoxConstraints(
-        minWidth: 60.0,
-        maxWidth: 170.0,
-        minHeight: 60.0,
-        maxHeight: 170.0,
+        minWidth: 70.0,
+        maxWidth: 185.0,
+        minHeight: 70.0,
+        maxHeight: 185.0,
       ),
       child: Padding(
         padding: const EdgeInsets.all(4.0),
@@ -51,8 +52,8 @@ class CatalogItem extends StatelessWidget {
           child: Row(
             children: [
               Hero(
-                tag: Key(catalog.id.toString()),
-                child: Image.network(catalog.image)),
+                  tag: Key(catalog.id.toString()),
+                  child: Image.network(catalog.image)),
               Expanded(
                   child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,7 +81,7 @@ class CatalogItem extends StatelessWidget {
                             backgroundColor:
                                 MaterialStateProperty.all(MyTheme.darkBlue),
                             shape: MaterialStateProperty.all(StadiumBorder())),
-                        child: const Text("Buy"),
+                        child: const Text("Add to Cart"),
                       )
                     ],
                   )
@@ -90,6 +91,6 @@ class CatalogItem extends StatelessWidget {
           ),
         ),
       ),
-    );
+    ).py8();
   }
 }
