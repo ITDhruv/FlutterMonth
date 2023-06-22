@@ -8,7 +8,7 @@ class CatalogModel {
       items.firstWhere((element) => element.id == id, orElse: null);
 
   //get item by Position
-  static getByPositon(int pos) => items[pos];
+  static Item getByPositon(int pos) => items[pos];
 }
 
 class Item {
