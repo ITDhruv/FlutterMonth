@@ -37,7 +37,7 @@ class CatalogItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.fromLTRB(8, 16, 8, 16),
-      color: Colors.white,
+      color: MyTheme.darkBlue,
       constraints: const BoxConstraints(
         minWidth: 70.0,
         maxWidth: 185.0,
@@ -47,7 +47,7 @@ class CatalogItem extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(4.0),
         child: Card(
-          color: MyTheme.creamColor,
+          color: MyTheme.darkcreamColor,
           shape: StadiumBorder(),
           child: Row(
             children: [
@@ -62,7 +62,8 @@ class CatalogItem extends StatelessWidget {
                   Text(
                     catalog.name,
                     style: TextStyle(
-                        fontWeight: FontWeight.bold, color: MyTheme.darkBlue),
+                        fontWeight: FontWeight.bold,
+                        color: MyTheme.lightBluishColor),
                   ),
                   Text(
                     catalog.desc,
@@ -78,8 +79,8 @@ class CatalogItem extends StatelessWidget {
                       ElevatedButton(
                         onPressed: () {},
                         style: ButtonStyle(
-                            backgroundColor:
-                                MaterialStateProperty.all(MyTheme.darkBlue),
+                            backgroundColor: MaterialStateProperty.all(
+                                MyTheme.lightBluishColor),
                             shape: MaterialStateProperty.all(StadiumBorder())),
                         child: const Text("Add to Cart"),
                       )
