@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_catalog/core/store.dart';
 import 'dart:convert';
 import 'package:flutter_catalog/models/catalog.dart';
 import 'package:flutter_catalog/utils/routes.dart';
@@ -8,6 +9,7 @@ import 'package:flutter_catalog/utils/widgets/home_widgets/catalog_list.dart';
 import 'package:flutter_catalog/utils/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 import '../utils/widgets/home_widgets/catalog_header.dart';
+import 'package:http/http.dart' as http;
 // import 'package:flutter_catalog/utils/widgets/item_widgets.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,7 +21,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final int days = 30;
-
   final String name = "Dhruwuu";
   @override
   void initState() {
@@ -41,6 +42,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final _cart = (VxState.store as MyStore).cart;
     return Scaffold(
       backgroundColor: context.canvasColor,
       floatingActionButton: FloatingActionButton(
@@ -50,7 +52,7 @@ class _HomePageState extends State<HomePage> {
           CupertinoIcons.cart,
           color: Colors.white,
         ),
-      ),
+      ).badge(color: Vx.red500, size: 18, count: _cart.items.length),
       body: SafeArea(
         child: Container(
           padding: EdgeInsets.all(32),
