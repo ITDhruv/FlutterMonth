@@ -8,7 +8,7 @@ class MyDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final imageUrl =
+    const imageUrl =
         "https://as01.epimg.net/img/comunes/fotos/fichas/equipos/large/67.png";
     return Drawer(
       child: Container(
