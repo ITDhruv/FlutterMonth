@@ -12,8 +12,10 @@ class MyTheme {
       appBarTheme: AppBarTheme(
         color: Colors.white,
         elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.black),
+        // ignore: deprecated_member_use
         toolbarTextStyle: Theme.of(context).textTheme.bodyText2,
+        // ignore: deprecated_member_use
         titleTextStyle: Theme.of(context).textTheme.headline6,
       ));
 
@@ -28,7 +30,8 @@ class MyTheme {
       appBarTheme: AppBarTheme(
         color: Colors.black,
         elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: Colors.white),
+        // ignore: deprecated_member_use
         toolbarTextStyle: Theme.of(context).textTheme.bodyText2,
         titleTextStyle: Theme.of(context)
             .textTheme
@@ -37,8 +40,8 @@ class MyTheme {
       ));
 
   //colors
-  static Color creamColor = Color(0xfff5f5f5);
+  static Color creamColor = const Color(0xfff5f5f5);
   static Color darkcreamColor = Vx.gray900;
-  static Color darkBlue = Color.fromARGB(255, 31, 29, 45);
+  static Color darkBlue = const Color.fromARGB(255, 31, 29, 45);
   static Color lightBluishColor = Vx.indigo400;
 }

@@ -24,7 +24,7 @@ class HomeDetailPage extends StatelessWidget {
           children: [
             Text(
               "\$${catalog.price}",
-              style: TextStyle(
+              style: const TextStyle(
                   fontWeight: FontWeight.bold, fontSize: 30, color: Colors.red),
             ),
             AddToCart(

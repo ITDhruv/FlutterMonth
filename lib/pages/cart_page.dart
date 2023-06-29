@@ -28,17 +28,23 @@ class CartPage extends StatelessWidget {
 class _CartTotal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // ignore: no_leading_underscores_for_local_identifiers
     final CartModel _cart = (VxState.store as MyStore).cart;
     return SizedBox(
       height: 200,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          "\$${_cart.totalPrice}"
-              .text
-              .xl4
-              .color(context.theme.hintColor)
-              .make(),
+          VxBuilder(
+            mutations: const {AddMutation, RemoveMutation},
+            builder: (context, store, _) {
+              return "\$${_cart.totalPrice}"
+                  .text
+                  .xl4
+                  .color(context.theme.hintColor)
+                  .make();
+            },
+          ),
           30.widthBox,
           ElevatedButton(
                   onPressed: () {
@@ -62,19 +68,21 @@ class _CartList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     VxState.watch(context, on: [RemoveMutation]);
+    // ignore: no_leading_underscores_for_local_identifiers
     final CartModel _cart = (VxState.store as MyStore).cart;
     return _cart.items.isEmpty
         ? "Nothing to display here".text.xl2.makeCentered()
         : ListView.builder(
             itemCount: _cart.items.length,
             itemBuilder: (context, index) => ListTile(
-              leading: Icon(Icons.done),
+              leading: const Icon(Icons.done),
+              title: Text(_cart.items[index].name),
               trailing: IconButton(
-                  onPressed: () {
-                    RemoveMutation(_cart.items[index]);
-                  },
-                  icon: Icon(Icons.remove_circle_outline)),
-              title: _cart.items[index].name.text.make(),
+                icon: const Icon(Icons.remove_circle_outline),
+                onPressed: () {
+                  RemoveMutation(_cart.items[index]);
+                },
+              ),
             ),
           );
   }

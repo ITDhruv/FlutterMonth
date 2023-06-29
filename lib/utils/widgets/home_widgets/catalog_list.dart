@@ -49,7 +49,7 @@ class CatalogItem extends StatelessWidget {
         padding: const EdgeInsets.all(4.0),
         child: Card(
           color: MyTheme.darkcreamColor,
-          shape: StadiumBorder(),
+          shape: const StadiumBorder(),
           child: Row(
             children: [
               Hero(
@@ -74,7 +74,7 @@ class CatalogItem extends StatelessWidget {
                     children: [
                       Text(
                         "\$${catalog.price}",
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 20),
                       ),
                       AddToCart(catalog: catalog)

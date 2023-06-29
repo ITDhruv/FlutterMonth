@@ -9,10 +9,10 @@ class ItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      shape: StadiumBorder(),
+      shape: const StadiumBorder(),
       child: ListTile(
         onTap: () {
-          print("${item.name} pressed");
+          debugPrint("${item.name} pressed");
         },
         leading: Image.network(item.image),
         title: Text(item.name),
@@ -20,7 +20,7 @@ class ItemWidget extends StatelessWidget {
         trailing: Text(
           "\$${item.price}",
           textScaleFactor: 1.5,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.deepPurple,
             fontWeight: FontWeight.bold,
           ),

@@ -6,7 +6,7 @@ class CatalogModel {
 
   //get item by ItemID
   getById(int id) =>
-      items.firstWhere((element) => element.id == id, orElse: null);
+      items.firstWhere((element) => element.id == id, orElse: () => '' as Item);
 
   //get item by Position
   static Item getByPositon(int pos) => items[pos];
